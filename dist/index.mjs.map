@@ -1,1 +1,0 @@
-{"version":3,"file":"index.mjs","sources":["../src/index.mjs"],"sourcesContent":["export default { fetch() { return new Response('hello world') } }\n"],"names":["index","fetch","Response"],"mappings":"AAAA,IAAeA,EAAA,CAAEC,MAAK,IAAY,IAAIC,SAAS"}
