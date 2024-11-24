@@ -1,0 +1,23 @@
+{
+  "name": "tmpimg",
+  "version": "0.0.1",
+  "description": "cloudflare workers to generate placeholder images",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "npx wrangler dev"
+  },
+  "author": "Francois Lecroart <peernohell@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.24.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "wrangler": "^3.90.0"
+  }
+}
+
