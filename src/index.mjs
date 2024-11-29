@@ -1,4 +1,6 @@
 import * as PImage from 'pureimage/dist/index.js';
+import fontRobotoBuffer from './Roboto-Regular.ttf';
+import opentype from 'opentype.js';
 
 
 class Writer extends EventTarget {
@@ -30,19 +32,31 @@ class Writer extends EventTarget {
 }
 
 async function handleRequest(request, env, writable) {
-  const img = PImage.make(200, 200);
+  // load font
+  const piFont = PImage.registerFont('','Roboto');
+  const otFont = await opentype.parse(fontRobotoBuffer); 
+  piFont.font = otFont;
+  piFont.loaded = true;
+
+
+  // generate canvas
+  const img = PImage.make(200, 50);
   const ctx = img.getContext('2d');
 
   ctx.beginPath();
-  ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, 200, 200);
+  ctx.fillStyle = "#E0E0E0";
+  ctx.fillRect(0, 0, 200, 50);
 
-  ctx.beginPath();
-  ctx.strokeStyle = "blue";
-  ctx.arc(100,100,50,1.7*Math.PI,0.7*Math.PI);
-  ctx.stroke();
+  ctx.fillStyle = '#1C1C1C';
+  ctx.font = "24px Roboto";
+  // ctx.font = "60pt source";
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+  ctx.fillText('hello world', 100, 25);
 
-  return await PImage.encodePNGToStream(img, new Writer(writable.getWriter()));
+  // render cavas to png stream and write to response
+  await PImage.encodePNGToStream(img, new Writer(writable.getWriter()));
+  return;
 }
 
 export default {

@@ -1,15 +1,17 @@
 {
   "name": "tmpimg",
-  "version": "0.1.0",
-  "description": "cloudflare workers to generate placeholder images",
+  "version": "0.2.0",
+  "description": "cloudflare worker to generate placeholder images",
   "module": "./dist/index.mjs",
   "scripts": {
     "build": "rollup -c",
-    "dev": "npx wrangler dev"
+    "dev": "npx wrangler dev",
+    "deploy": "npx wrangler deploy"
   },
   "author": "Francois Lecroart <peernohell@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "opentype.js": "^0.4.11",
     "pureimage": "^0.4.18"
   },
   "devDependencies": {
