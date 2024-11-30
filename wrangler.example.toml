@@ -7,4 +7,7 @@ main = "./dist/index.mjs"
 [build]
 command = "npm install && npm run build"
 
-
+[[rules]]
+type = "Data"
+globs = [ "**/*.ttf", "**/*.otf" ]
+fallthrough = true
