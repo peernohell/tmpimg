@@ -32,6 +32,14 @@ class Writer extends EventTarget {
 }
 
 async function handleRequest(request, env, writable) {
+  const url = new URL(request.url);
+  const [, size] = url.pathname.split('/');
+  let [width, height] = size.split('x').map(Number);
+  if (!width || isNaN(width)) width = 200;
+  if (!height || isNaN(height)) height = width;
+
+  console.log('handleRequest', url.pathname, size, width, height);
+
   // load font
   const piFont = PImage.registerFont('','Roboto');
   const otFont = await opentype.parse(fontRobotoBuffer); 
@@ -40,19 +48,19 @@ async function handleRequest(request, env, writable) {
 
 
   // generate canvas
-  const img = PImage.make(200, 50);
+  const img = PImage.make(width, height);
   const ctx = img.getContext('2d');
 
   ctx.beginPath();
   ctx.fillStyle = "#E0E0E0";
-  ctx.fillRect(0, 0, 200, 50);
+  ctx.fillRect(0, 0, width, height);
 
   ctx.fillStyle = '#1C1C1C';
   ctx.font = "24px Roboto";
   // ctx.font = "60pt source";
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'center';
-  ctx.fillText('hello world', 100, 25);
+  ctx.fillText('hello world', width / 2, height / 2);
 
   // render cavas to png stream and write to response
   await PImage.encodePNGToStream(img, new Writer(writable.getWriter()));
