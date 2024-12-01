@@ -38,7 +38,9 @@ async function handleRequest(request, env, writable) {
   if (!width || isNaN(width)) width = 200;
   if (!height || isNaN(height)) height = width;
 
-  console.log('handleRequest', url.pathname, size, width, height);
+  const text = url.searchParams.get('text') || size;
+
+  console.log('handleRequest', url, url.pathname, size, width, height, text);
 
   // load font
   const piFont = PImage.registerFont('','Roboto');
@@ -60,7 +62,7 @@ async function handleRequest(request, env, writable) {
   // ctx.font = "60pt source";
   ctx.textBaseline = 'middle';
   ctx.textAlign = 'center';
-  ctx.fillText('hello world', width / 2, height / 2);
+  ctx.fillText(text, width / 2, height / 2);
 
   // render cavas to png stream and write to response
   await PImage.encodePNGToStream(img, new Writer(writable.getWriter()));
