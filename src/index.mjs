@@ -35,7 +35,7 @@ async function handleRequest(request, env, writable) {
   const url = new URL(request.url);
   const [, size, bgColor = 'cccccc', textColor = 'a0a0a0'] = url.pathname.split('/');
   
-  let [width, height] = size.split('x').map(Number);
+  let [width, height] = size.split('x').map(n => parseInt(n, 10));
   if (!width || isNaN(width)) width = 200;
   if (!height || isNaN(height)) height = width;
 
