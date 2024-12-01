@@ -33,12 +33,13 @@ class Writer extends EventTarget {
 
 async function handleRequest(request, env, writable) {
   const url = new URL(request.url);
-  const [, size] = url.pathname.split('/');
+  const [, size, bgColor = 'cccccc', textColor = 'a0a0a0'] = url.pathname.split('/');
+  
   let [width, height] = size.split('x').map(Number);
   if (!width || isNaN(width)) width = 200;
   if (!height || isNaN(height)) height = width;
 
-  const text = url.searchParams.get('text') || size;
+  const text = url.searchParams.get('text') || `${width}x${height}`;
 
   console.log('handleRequest', url, url.pathname, size, width, height, text);
 
@@ -54,10 +55,10 @@ async function handleRequest(request, env, writable) {
   const ctx = img.getContext('2d');
 
   ctx.beginPath();
-  ctx.fillStyle = "#E0E0E0";
+  ctx.fillStyle = `#${bgColor}`;
   ctx.fillRect(0, 0, width, height);
 
-  ctx.fillStyle = '#1C1C1C';
+  ctx.fillStyle = `#${textColor}`;
   ctx.font = "24px Roboto";
   // ctx.font = "60pt source";
   ctx.textBaseline = 'middle';
