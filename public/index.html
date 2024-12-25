@@ -10,8 +10,48 @@
       display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    }
+
+    .bento {
+      display: grid;
+      max-width: 900px;
+      height: 760px;
+      gap: 1.5vw;
+      clear: both;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        "img1 img1 img1 img1 img2 img2"
+        "img1 img1 img1 img1 img2 img2"
+        "img1 img1 img1 img1 img2 img2"
+        "img1 img1 img1 img1 img2 img2"
+        "img3 img3 img4 img4 img5 img5";
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+      }
+
+      img:nth-child(1) {
+        grid-area: img1;
+      }
+      img:nth-child(2) {
+        grid-area: img2;
+      }
+
+      img:nth-child(3) {
+        grid-area: img3;
+      }
+      img:nth-child(4) {
+        grid-area: img4;
+      }
+
+      img:nth-child(5) {
+        grid-area: img5;
+      }
     }
   </style>
 </head>
@@ -21,22 +61,20 @@
     <article>
       <header>
         <h1>tmpimg – The Free Image Placeholder Service Favoured By Designers</h1>
-        <img src="/800x300?text=tmpimg" data-lazy-type="image" data-src="/800x300?text=tmpimg" alt="Hero image containing tmpimg text">
+        <img src="/800x300?text=tmpimg.net" data-lazy-type="image" data-src="/800x300?text=tmpimg" alt="Hero image containing tmpimg.net text">
       </header>
       <div>
         <h2 id="What_Is_Placeholdercom"> What Is tmpimg.net?</h2>
         <p>
           <b>tmpimg.net generates custom placeholder images on the fly, like these examples:</b>
         </p>
-        <p>
-          <img src="/350x150" data-lazy-type="image" data-src="/350x150">
-          <br>
-          <img src="/200x100" data-lazy-type="image" data-src="/200x100">
-          &nbsp;
-          <img class="image lazy-loaded" src="/140x100" data-lazy-type="image" data-src="/140x100">
-          <br>
-          <img src="/350x65" data-lazy-type="image" data-src="/350x65">
-        </p>
+        <div class="bento">
+          <img src="https://tmpimg.net/600x600">
+          <img src="https://tmpimg.net/300x600">
+          <img src="https://tmpimg.net/300x150">
+          <img src="https://tmpimg.net/300x150">
+          <img src="https://tmpimg.net/300x150">
+        </div>
 
         <h2>How to use tmpimg</h2>
         <p>Just specify the image size after our URL <em>(https://tmpimg.net) </em>and you’ll get a placeholder image. So the image URL should look this:</p>
