@@ -5,179 +5,184 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tmpimg</title>
+  <style>
+    main {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="content" class="site-content" style="transform: none;">
-    <div id="primary" class="content-area">
-      <main id="main" class="site-main">
-        <article id="post-387" class="post-387 page type-page status-publish hentry">
-          <header class="entry-header">
-            <h1 class="entry-title">tmpimg – The Free Image Placeholder Service Favoured By Designers</h1>
-            <img class="lazy-loaded" src="/800x300?text=tmpimg" data-lazy-type="image" data-src="/800x300?text=tmpimg" alt="Hero image containing tmpimg text">
-          </header>
-          <div class="entry-content">
-            <h2 id="What_Is_Placeholdercom"> What Is tmpimg.net?</h2>
-            <p>
-              <b>tmpimg.net generates custom placeholder images on the fly, like these examples:</b>
-            </p>
-            <p>
-              <img class="lazy-loaded" src="/350x150" data-lazy-type="image" data-src="/350x150">
-              <br>
-              <img class="lazy-loaded" src="/200x100" data-lazy-type="image" data-src="/200x100">
-              &nbsp;
-              <img class="image lazy-loaded" src="/140x100" data-lazy-type="image" data-src="/140x100">
-              <br>
-              <img class="lazy-loaded" src="/350x65" data-lazy-type="image" data-src="/350x65">
-            </p>
+  <main>
+    <article>
+      <header>
+        <h1>tmpimg – The Free Image Placeholder Service Favoured By Designers</h1>
+        <img src="/800x300?text=tmpimg" data-lazy-type="image" data-src="/800x300?text=tmpimg" alt="Hero image containing tmpimg text">
+      </header>
+      <div>
+        <h2 id="What_Is_Placeholdercom"> What Is tmpimg.net?</h2>
+        <p>
+          <b>tmpimg.net generates custom placeholder images on the fly, like these examples:</b>
+        </p>
+        <p>
+          <img src="/350x150" data-lazy-type="image" data-src="/350x150">
+          <br>
+          <img src="/200x100" data-lazy-type="image" data-src="/200x100">
+          &nbsp;
+          <img class="image lazy-loaded" src="/140x100" data-lazy-type="image" data-src="/140x100">
+          <br>
+          <img src="/350x65" data-lazy-type="image" data-src="/350x65">
+        </p>
 
-            <h2 id="How_To_Use_Our_Placeholders">How to use tmpimg</h2>
-            <p>Just specify the image size after our URL <em>(https://tmpimg.net) </em>and you’ll get a placeholder image. So the image URL should look this:</p>
-            <p>
-              <code>https://tmpimg.net<mark><b>/150</b></mark></code>
-            </p>
-            <p>You can use the images in your HTML or CSS, like this:</p>
-            <p><code>&lt;a href="https://tmpimg.net"&gt;&lt;img src="https://tmpimg.net/150"&gt;&lt;/a&gt;</code></p>
-            <!-- <p>There are a <a href="https://tmpimg.net/rules/">few simple rules</a> before you
-              use them.</p> -->
-            <h2 id="How_To_Set_Image_Size">How to set image size</h2>
-            <p>Specify the width first, then height. Height is optional: if no height is specified, your placeholder
-              image will be a square. So this example…</p>
-            <p>
-              <code>https://tmpimg.net<em><mark>/150</mark></em></code>
-            </p>
-            <p>…generates a 150 pixel square dummy image:</p>
-            <p>
-              <img class="lazy-loaded" src="/150" data-lazy-type="image" data-src="https://tmpimg.net/150" alt="Square placeholder image 300px">
-            </p>
-            <p>
-              <em>
-                <b>NB:</b> Size must be the first folder specified in the URL
-              </em>
-            </p>
-            <!--
-            <h2>
-              <span id="How_To_Set_Image_Formats">How To Set Image Formats</span>
-            </h2>
-            <p>Image format is optional – the default is a .GIF. You can use the following image file extensions…</p>
-            <ul>
-              <li>.GIF</li>
-              <li>.JPG</li>
-              <li>.JPEG</li>
-              <li>.PNG</li>
-            </ul>
-            <p>Adding an image file extension will render the image in the correct format. JPG &amp; JPEG are identical.
-              The image extension can go at the end of any option in the URL, like this:-<br> <code>
-  </code>
-            </p>
-            <p>
-              <code>
-  <code>
-  </code>
-              </code>
-            </p>
-            <ul>
-              <li> <span>https://tmpimg.net/300</span> <strong> <mark>.png</mark> </strong>/09f/fff </li>
-              <li> <span>https://tmpimg.net/300/09f</span> <strong> <mark>.png</mark> </strong>/fff </li>
-              <li> <span>https://tmpimg.net/300/09f/fff</span> <strong> <mark>.png</mark> </strong> </li>
-            </ul>
-            <p>
-              <code>
-  <br> </code>
-            </p>
-            <p>
-              <code>
-  </code>
-            </p>
-          -->
-            <h2 id="How_To_Set_Custom_Text">How To Set Custom Text</h2>
-            <p>You can specify text for your image by using a query string at the <em>very end</em> of the URL.</p>
-            <p>So this URL…</p>
-            <p>
-              <code>https://tmpimg.net/728x90<strong><mark>?text=Visit+sakod.fr+SaaS+Stories</mark></strong></code>
-            </p>
-            <p>…produces this 728×90 sized image <em>(ie, leaderboard ad dimensions)</em>:-</p>
-            <p>
-              <a href="https://sakod.fr/" rel="noopener noreferrer" target="_blank">
-                <img class="alignnone lazy-loaded" src="/728x90?text=Visit+sakod.fr+SaaS+Stories" data-lazy-type="image" data-src="/728x90.png?text=Visit+sakod.fr+SaaS+Stories" alt="sakod.fr Placeholder Image" width="728" height="90">
-              </a>
-            </p>
-            <p>Text is optional. The default is the image dimensions in pixels. You can use A-Z characters, upper or
-              lowercase, numbers, and most symbols. Spaces are specified with a plus sign (+). For example…</p>
-            <p>
-              <code>https://tmpimg.net/468x60<strong> <mark>?text=Visit+Blogging.com+Now</mark> </strong> </code>
-            </p>
-            <p>…will produces this <a href="https://tmpimg.net/banners-ads/">placeholder banner ad</a> plus the text <em>(complete with spaces)</em>:-</p>
-            <p>
-              <a href="https://blogging.com/">
-                <img class="lazy-loaded" src="/468x60?text=Visit+Blogging.com+Now" data-lazy-type="image" data-src="https://tmpimg.net/468x60?text=Visit+Blogging.com+Now" alt="Placeholder Image with text sample"> </a>
-            </p>
-            <h2>
-              <span id="How_To_Set_Background_Text_Color">How To Set Background &amp; Text Color</span>
-            </h2>
-            <p>By default, text is black and the background grey.</p>
-            <p>Colors are represented as hex codes after the dummy image dimensions. For example, #FF0000 is red. Colors
-              <em>must</em> follow the dimensions. So this image URL…</p>
-            <p>
-              <code>https://tmpimg.net/150<b><mark>/A7F3D0/222325</mark></b>?Text=sakod.fr</code>
-              <br>
-              <code>https://tmpimg.net/150<b><mark>/8D30DB/FFFFFF</mark></b>?Text=dok.io</code>
-              <br>
-              <code>https://tmpimg.net/150<b><mark>/FF6464/222325</mark></b>?Text=copost.fr</code>
-              <br>
-              <code>https://tmpimg.net/150<b><mark>/ffe100/252522</mark></b>?Text=usecase.fr</code>
-            </p>
-            <p>…produces images in the shape of 150x150 button ads:</p>
-            <p>
-              <a href="https://sakod.fr/" rel="noopener noreferrer" target="_blank">
-                <img class="lazy-loaded" src="/150/A7F3D0/222325/?text=sakod.fr" data-lazy-type="image" data-src="https://tmpimg.net/150/A7F3D0/222325/?text=sakod.fr">
-              </a>
-              <a href="https://dok.io/" rel="noopener noreferrer" target="_blank">
-                <img class="lazy-loaded" src="/150/8D30DB/FFFFFF/?text=dok.io" data-lazy-type="image" data-src="https://tmpimg.net/150/8D30DB/FFFFFF/?text=dok.io">
-              </a>
-              <a href="https://copost.fr/" rel="noopener noreferrer" target="_blank">
-                <img class="lazy-loaded" src="/150/FF6464/222325/?text=copost.fr" data-lazy-type="image" data-src="https://tmpimg.net/150/FF6464/222325/?text=copost.fr">
-              </a>
-              <a href="https://usecase.fr/" rel="noopener noreferrer" target="_blank">
-                <img class="lazy-loaded" src="/150/ffe100/252522/?text=usecase.fr" data-lazy-type="image" data-src="https://tmpimg.net/150/ffe100/252522/?text=usecase.fr">
-              </a>
-            </p>
-            <p>The first color is always the background color, and the second color is the text color.</p>
-            <h3>
-              <span id="Popular_Hex_Color_Codes">Popular Hex Color Codes</span>
-            </h3>
-            <ul>
-              <li>White – FFFFFF</li>
-              <li>Black – 000000</li>
-              <li>Red – FF0000</li>
-              <li>Blue – 0000FF</li>
-              <li>Yellow – FFFFFF</li>
-              <li>Green – 008000</li>
-            </ul>
-            <!-- <h2>
-              <span id="NEW_Placeholder_Logos_Text_Banners_Ads">
-                <b>NEW!</b> Placeholder Logos, Text &amp; Banners Ads</span>
-            </h2> -->
-            <h2>Rules</h2>
-            <p>
-              <a href="https://tmpimg.net/">tmpimg.net</a> is a free service for web designers and developers.
-            </p>
-            <p>We have a few simple rules we ask you to respect:</p>
-            <h3>Rule #1: Usage Limits</h3>
-            <p>You’re welcome to hotlink our images from small sites or staging servers; if your image usage is excessive, we’ll automatically block your domain or IP address &amp; the images will 404.</p>
-            <p>Excessive means “over 100,000 page views per month” <em>(this is subject to change, as we experiment with the new limits)</em>.</p>
-            <p>Need more impressions? Don't to open an issue on github and we will solution. Also, it's an open source project that can be easily hosted on <a href="https://cloudflare.com">cloudflare</a>.</p>
-            <h3>Rule #2: Credit The Site</h3>
-            <p>If you find <span class="skimlinks-unlinked">tmpimg.net</span> useful, please link to us to let your users know about the tool and spread the word. We rely 100% on word of mouth.</p>
-            <p>That’s it.</p>
-            <h3>Any Questions</h3>
-            <p>Please <a href="https://github.com/peernohell/tmpimg" target="_blank">check the github page</a> first, then <a href="https://github.com/peernohell/tmpimg/issues" target="_blank">create an issue</a>.
-            </p>
-          </div>
-        </article>
-      </main>
-    </div>
-  </div>
+        <h2>How to use tmpimg</h2>
+        <p>Just specify the image size after our URL <em>(https://tmpimg.net) </em>and you’ll get a placeholder image. So the image URL should look this:</p>
+        <p>
+          <code>https://tmpimg.net<mark><b>/150</b></mark></code>
+        </p>
+        <p>You can use the images in your HTML or CSS, like this:</p>
+        <p><code>&lt;a href="https://tmpimg.net"&gt;&lt;img src="https://tmpimg.net/150"&gt;&lt;/a&gt;</code></p>
+        <!-- <p>There are a <a href="https://tmpimg.net/rules/">few simple rules</a> before you
+          use them.</p> -->
+        <h2 id="How_To_Set_Image_Size">How to set image size</h2>
+        <p>Specify the width first, then height. Height is optional: if no height is specified, your placeholder
+          image will be a square. So this example…</p>
+        <p>
+          <code>https://tmpimg.net<em><mark>/150</mark></em></code>
+        </p>
+        <p>…generates a 150 pixel square dummy image:</p>
+        <p>
+          <img src="/150" data-lazy-type="image" data-src="https://tmpimg.net/150" alt="Square placeholder image 300px">
+        </p>
+        <p>
+          <em>
+            <b>NB:</b> Size must be the first folder specified in the URL
+          </em>
+        </p>
+        <!--
+        <h2>
+          <span id="How_To_Set_Image_Formats">How To Set Image Formats</span>
+        </h2>
+        <p>Image format is optional – the default is a .GIF. You can use the following image file extensions…</p>
+        <ul>
+          <li>.GIF</li>
+          <li>.JPG</li>
+          <li>.JPEG</li>
+          <li>.PNG</li>
+        </ul>
+        <p>Adding an image file extension will render the image in the correct format. JPG &amp; JPEG are identical.
+          The image extension can go at the end of any option in the URL, like this:-<br> <code>
+</code>
+        </p>
+        <p>
+          <code>
+<code>
+</code>
+          </code>
+        </p>
+        <ul>
+          <li> <span>https://tmpimg.net/300</span> <strong> <mark>.png</mark> </strong>/09f/fff </li>
+          <li> <span>https://tmpimg.net/300/09f</span> <strong> <mark>.png</mark> </strong>/fff </li>
+          <li> <span>https://tmpimg.net/300/09f/fff</span> <strong> <mark>.png</mark> </strong> </li>
+        </ul>
+        <p>
+          <code>
+<br> </code>
+        </p>
+        <p>
+          <code>
+</code>
+        </p>
+      -->
+        <h2 id="How_To_Set_Custom_Text">How To Set Custom Text</h2>
+        <p>You can specify text for your image by using a query string at the <em>very end</em> of the URL.</p>
+        <p>So this URL…</p>
+        <p>
+          <code>https://tmpimg.net/728x90<strong><mark>?text=Visit+sakod.fr+SaaS+Stories</mark></strong></code>
+        </p>
+        <p>…produces this 728×90 sized image <em>(ie, leaderboard ad dimensions)</em>:-</p>
+        <p>
+          <a href="https://sakod.fr/" rel="noopener noreferrer" target="_blank">
+            <img src="/728x90?text=Visit+sakod.fr+SaaS+Stories" data-lazy-type="image" data-src="/728x90.png?text=Visit+sakod.fr+SaaS+Stories" alt="sakod.fr Placeholder Image" width="728" height="90">
+          </a>
+        </p>
+        <p>Text is optional. The default is the image dimensions in pixels. You can use A-Z characters, upper or
+          lowercase, numbers, and most symbols. Spaces are specified with a plus sign (+). For example…</p>
+        <p>
+          <code>https://tmpimg.net/468x60<strong> <mark>?text=Visit+Blogging.com+Now</mark> </strong> </code>
+        </p>
+        <p>…will produces this <a href="https://tmpimg.net/banners-ads/">placeholder banner ad</a> plus the text <em>(complete with spaces)</em>:-</p>
+        <p>
+          <a href="https://blogging.com/">
+            <img src="/468x60?text=Visit+Blogging.com+Now" data-lazy-type="image" data-src="https://tmpimg.net/468x60?text=Visit+Blogging.com+Now" alt="Placeholder Image with text sample"> </a>
+        </p>
+        <h2>
+          <span id="How_To_Set_Background_Text_Color">How To Set Background &amp; Text Color</span>
+        </h2>
+        <p>By default, text is black and the background grey.</p>
+        <p>Colors are represented as hex codes after the dummy image dimensions. For example, #FF0000 is red. Colors
+          <em>must</em> follow the dimensions. So this image URL…</p>
+        <p>
+          <code>https://tmpimg.net/150<b><mark>/A7F3D0/222325</mark></b>?Text=sakod.fr</code>
+          <br>
+          <code>https://tmpimg.net/150<b><mark>/8D30DB/FFFFFF</mark></b>?Text=dok.io</code>
+          <br>
+          <code>https://tmpimg.net/150<b><mark>/FF6464/222325</mark></b>?Text=copost.fr</code>
+          <br>
+          <code>https://tmpimg.net/150<b><mark>/ffe100/252522</mark></b>?Text=usecase.fr</code>
+        </p>
+        <p>…produces images in the shape of 150x150 button ads:</p>
+        <p>
+          <a href="https://sakod.fr/" rel="noopener noreferrer" target="_blank">
+            <img src="/150/A7F3D0/222325/?text=sakod.fr" data-lazy-type="image" data-src="https://tmpimg.net/150/A7F3D0/222325/?text=sakod.fr">
+          </a>
+          <a href="https://dok.io/" rel="noopener noreferrer" target="_blank">
+            <img src="/150/8D30DB/FFFFFF/?text=dok.io" data-lazy-type="image" data-src="https://tmpimg.net/150/8D30DB/FFFFFF/?text=dok.io">
+          </a>
+          <a href="https://copost.fr/" rel="noopener noreferrer" target="_blank">
+            <img src="/150/FF6464/222325/?text=copost.fr" data-lazy-type="image" data-src="https://tmpimg.net/150/FF6464/222325/?text=copost.fr">
+          </a>
+          <a href="https://usecase.fr/" rel="noopener noreferrer" target="_blank">
+            <img src="/150/ffe100/252522/?text=usecase.fr" data-lazy-type="image" data-src="https://tmpimg.net/150/ffe100/252522/?text=usecase.fr">
+          </a>
+        </p>
+        <p>The first color is always the background color, and the second color is the text color.</p>
+        <h3>
+          <span id="Popular_Hex_Color_Codes">Popular Hex Color Codes</span>
+        </h3>
+        <ul>
+          <li>White – FFFFFF</li>
+          <li>Black – 000000</li>
+          <li>Red – FF0000</li>
+          <li>Blue – 0000FF</li>
+          <li>Yellow – FFFFFF</li>
+          <li>Green – 008000</li>
+        </ul>
+        <!-- <h2>
+          <span id="NEW_Placeholder_Logos_Text_Banners_Ads">
+            <b>NEW!</b> Placeholder Logos, Text &amp; Banners Ads</span>
+        </h2> -->
+        <h2>Rules</h2>
+        <p>
+          <a href="https://tmpimg.net/">tmpimg.net</a> is a free service for web designers and developers.
+        </p>
+        <p>We have a few simple rules we ask you to respect:</p>
+        <h3>Rule #1: Usage Limits</h3>
+        <p>You’re welcome to hotlink our images from small sites or staging servers; if your image usage is excessive, we’ll automatically block your domain or IP address &amp; the images will 404.</p>
+        <p>Excessive means “over 100,000 page views per month” <em>(this is subject to change, as we experiment with the new limits)</em>.</p>
+        <p>Need more impressions? Don't to open an issue on github and we will solution. Also, it's an open source project that can be easily hosted on <a href="https://cloudflare.com" target="_blank">cloudflare</a>.</p>
+        <h3>Rule #2: Credit The Site</h3>
+        <p>If you find <a href="https://tmpimg.net">tmpimg.net</a> useful, please link to us to let your users know about the tool and spread the word. We rely 100% on word of mouth.</p>
+        <p>That’s it.</p>
+        <h3>Any Questions</h3>
+        <p>Please <a href="https://github.com/peernohell/tmpimg" target="_blank">check the github page</a> first, then <a href="https://github.com/peernohell/tmpimg/issues" target="_blank">create an issue</a>.
+        </p>
+      </div>
+    </article>
+  </main>
 </body>
 
 </html>
