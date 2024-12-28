@@ -1,6 +1,8 @@
 # tmpimg
 
-cloudflare workers to generate placeholder images
+cloudflare workers to generate placeholder images.
+
+You can also check the website for usage of the service: [tmpimg.net](https://tmpimg.net)
 
 
 # install
